@@ -12,7 +12,7 @@ app.use("/api/products", productsRoutes);
 
 async function start() {
   try {
-    await connectDB();
+    await connectDB(process.env.DB_URL);
     app.listen(PORT, () => {
       console.log(`${PORT} is running`);
     });

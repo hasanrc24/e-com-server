@@ -1,11 +1,9 @@
 const mongoose = require("mongoose");
 
-uri =
-  "mongodb+srv://e-com:wPcn9pfGdUboOk34@cluster0.xflbu.mongodb.net/e-com?retryWrites=true&w=majority";
-
-const connectDB = () => {
+const connectDB = (uri) => {
   console.log("ok");
-  return mongoose.set("strictQuery", false).connect(uri, {
+  mongoose.set("strictQuery", false);
+  return mongoose.connect(uri, {
     useNewUrlParser: true,
     useUnifiedTopology: true,
   });
