@@ -1,7 +1,7 @@
 const mongoose = require("mongoose");
 
 const connectDB = (uri) => {
-  console.log("ok");
+  console.log(uri);
   mongoose.set("strictQuery", false);
   return mongoose.connect(uri, {
     useNewUrlParser: true,

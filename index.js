@@ -3,6 +3,7 @@ const app = express();
 const PORT = process.env.PORT || 5000;
 const productsRoutes = require("./routes/products");
 const connectDB = require("./database/database");
+require("dotenv").config();
 
 app.get("/", (req, res) => {
   res.send("Server is live");
